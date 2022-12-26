@@ -29,9 +29,9 @@ module.exports = {
           accent: "#d9f99d",
           neutral: "#3d4451",
           "base-100": "#ffffff",
+          fontFamily: "Chalkboard"
         },
       },
-      "wireframe",
     ],
   }
 }
