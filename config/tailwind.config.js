@@ -28,6 +28,8 @@ module.exports = {
           secondary: "#fde68a",
           accent: "#d9f99d",
           neutral: "#3d4451",
+          warning: "#fecaca",
+          info: "#CAE2E8",
           "base-100": "#ffffff",
           fontFamily: "Chalkboard"
         },
