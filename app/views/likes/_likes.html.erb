@@ -1,0 +1,13 @@
+<div class="flex">
+  <% if current_user.happy?(item) %>
+    <%= render 'happies/unlike', { item: item} %>
+  <% elsif current_user.normal?(item)%>
+    <%= render 'normals/unlike', { item: item} %>
+  <% elsif current_user.angry?(item) %>
+    <%= render 'angries/unlike', { item: item} %>
+  <% else %>
+    <%= render 'happies/like', { item: item} %>
+    <%= render 'normals/like', { item: item} %>
+    <%= render 'angries/like', { item: item} %>
+  <% end %>
+</div>

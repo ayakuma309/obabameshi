@@ -1,0 +1,5 @@
+<%= turbo_frame_tag dom_id(item,:angry_like) do %>
+  <%= button_to item_angries_path(item_id: item.id), class: "btn btn-info",method: :delete do %>
+    いいね外す
+  <% end %>
+<% end %>
