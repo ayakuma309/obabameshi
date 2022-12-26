@@ -21,6 +21,17 @@ module.exports = {
     require("daisyui"),
   ],
   daisyui: {
-    themes: ["wireframe"]
+    themes: [
+      {
+        mytheme: {
+          primary: "#fdba74",
+          secondary: "#fde68a",
+          accent: "#d9f99d",
+          neutral: "#3d4451",
+          "base-100": "#ffffff",
+          fontFamily: "Chalkboard"
+        },
+      },
+    ],
   }
 }

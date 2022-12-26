@@ -1,8 +1,8 @@
 <header>
-  <div class="navbar bg-base-200">
+  <div class="navbar bg-primary">
     <div class="navbar-start">
       <button class="btn btn-square btn-ghost">
-        logo
+        <%=link_to "logo", root_path, class: "btn btn-square btn-ghost"%>
       </button>
     </div>
     <div class="navbar-end">
@@ -12,6 +12,7 @@
         </label>
         <ul tabindex="0" class="menu menu-conpact dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 text-left">
           <li><%= link_to 'TOP', root_path %></li>
+          <li><%= link_to 'アイテム一覧', items_path %></li>
           <li><%= link_to 'Logout', logout_path, class: 'dropdown-item', data: { turbo_method: :delete } %></li>
         </ul>
       </div>

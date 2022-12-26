@@ -83,3 +83,7 @@ group :test do
   gem 'webdrivers'
 end
 gem 'sorcery'
+gem 'rakuten_web_service'
+gem 'dotenv-rails'
+gem 'kaminari'
+gem 'ransack'

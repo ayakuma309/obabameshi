@@ -1,0 +1,28 @@
+<div class="mx-auto px-1 py-3 sm:px-1 max-w-3xl text-center">
+  <%= search_form_for @q, html: { data: { turbo_frame: 'items-list' } } , url: items_path do |f|%>
+    <div class="text-center my-3">
+      <div class="my-2 font-weight-bold">キーワード検索</div>
+      <%= f.search_field :name_cont %>
+      <%= button_tag type: 'submit', class: 'btn btn-primary' do %>
+        検索
+      <% end %>
+    </div>
+  <% end %>
+  <% @items.each do |item| %>
+    <div class="card w-96 bg-base-100 shadow-xl my-3">
+      <%= image_tag  item.image ,size: "250x250", class: "mx-auto"%>
+
+      <div class="card-body items-center text-center">
+        <h2 class="card-title">
+          <%= item.name %>
+        </h2>
+        <button class="btn btn-secondary">
+          <%= link_to item.url do%>
+            楽天市場へ
+          <% end %>
+        </button>
+      </div>
+    </div>
+  <% end %>
+  <%= paginate @items %>
+</div>
