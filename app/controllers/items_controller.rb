@@ -11,7 +11,7 @@ class ItemsController < ApplicationController
       @results = RakutenWebService::Ichiba::Item.search(
         keyword: '介護食',
         page: params[:page],
-        hits: 10)
+        hits: 30)
 
       @results.each do |result|
         item = Item.new(read(result))
