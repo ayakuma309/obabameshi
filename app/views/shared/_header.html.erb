@@ -1,9 +1,10 @@
 <header>
   <div class="navbar bg-primary">
     <div class="navbar-start">
-      <button class="btn btn-square btn-ghost">
-        <%=link_to "logo", root_path, class: "btn btn-square btn-ghost"%>
-      </button>
+      <%=link_to  root_path, class: "btn btn-ghost flex" do%>
+        OBABA MESHI
+        <%=image_tag 'obaba_normal.png', size: '50x50' %>
+      <% end %>
     </div>
     <div class="navbar-end">
       <div class="dropdown dropdown-end">
