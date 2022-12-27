@@ -1,5 +1,7 @@
 class HappiesController < ApplicationController
-  def index; end
+  def index
+    @items = current_user.happy_items
+  end
 
   def create
     @item = Item.find(params[:item_id])

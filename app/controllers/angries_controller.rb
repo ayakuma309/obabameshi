@@ -1,4 +1,8 @@
 class AngriesController < ApplicationController
+  def index
+    @items = current_user.angry_items
+  end
+
   def create
     @item = Item.find(params[:item_id])
     current_user.angries.create!(item_id: @item.id)

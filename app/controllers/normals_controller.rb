@@ -1,4 +1,8 @@
 class NormalsController < ApplicationController
+  def index
+    @items = current_user.normal_items
+  end
+
   def create
     @item = Item.find(params[:item_id])
     current_user.normals.create!(item_id: @item.id)
