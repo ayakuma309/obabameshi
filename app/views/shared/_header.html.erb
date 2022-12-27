@@ -15,7 +15,11 @@
           <li><%= link_to 'TOP', root_path %></li>
           <li><%= link_to 'アイテム一覧', items_path %></li>
           <li><%= link_to '評価したアイテム一覧', happies_path %></li>
-          <li><%= link_to 'Logout', logout_path, class: 'dropdown-item', data: { turbo_method: :delete } %></li>
+          <li>
+            <%= button_to logout_path, method: :delete do %>
+              Logout
+            <% end %>
+          </li>
         </ul>
       </div>
     </div>
