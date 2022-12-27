@@ -7,6 +7,10 @@ Bundler.require(*Rails.groups)
 module ObabameshiApp
   class Application < Rails::Application
     config.load_defaults 7.0
+    config.time_zone = 'Asia/Tokyo'
+    config.active_record.default_timezone = :local
+    config.i18n.default_locale = :ja
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales','**', '*.{rb,yml}').to_s]
 
     config.generators do |g| # ここから追記
       g.assets false # CSS, JavaScriptファイルを自動生成しない

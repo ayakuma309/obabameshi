@@ -1,0 +1,6 @@
+<%= turbo_frame_tag dom_id(item,:happy_like) do %>
+  <%= button_to item_happies_path(item_id: item.id),method: :delete do %>
+    <%=image_tag 'obaba_happy.png', size: '150x150' %>
+    Happy <%=item.happies.count%>
+  <% end %>
+<% end %>

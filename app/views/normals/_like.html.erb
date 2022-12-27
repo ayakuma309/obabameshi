@@ -1,0 +1,5 @@
+<%= turbo_frame_tag dom_id(item,:normal_like) do %>
+  <%= button_to item_normals_path(item_id: item.id),class: "btn btn-accent", method: :post do %>
+    normal
+  <% end %>
+<% end %>

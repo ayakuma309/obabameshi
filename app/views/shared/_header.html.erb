@@ -1,9 +1,10 @@
 <header>
   <div class="navbar bg-primary">
     <div class="navbar-start">
-      <button class="btn btn-square btn-ghost">
-        <%=link_to "logo", root_path, class: "btn btn-square btn-ghost"%>
-      </button>
+      <%=link_to  root_path, class: "btn btn-ghost flex" do%>
+        OBABA MESHI
+        <%=image_tag 'obaba_normal.png', size: '50x50' %>
+      <% end %>
     </div>
     <div class="navbar-end">
       <div class="dropdown dropdown-end">
@@ -13,7 +14,12 @@
         <ul tabindex="0" class="menu menu-conpact dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 text-left">
           <li><%= link_to 'TOP', root_path %></li>
           <li><%= link_to 'アイテム一覧', items_path %></li>
-          <li><%= link_to 'Logout', logout_path, class: 'dropdown-item', data: { turbo_method: :delete } %></li>
+          <li><%= link_to '評価したアイテム一覧', happies_path %></li>
+          <li>
+            <%= button_to logout_path, method: :delete do %>
+              Logout
+            <% end %>
+          </li>
         </ul>
       </div>
     </div>

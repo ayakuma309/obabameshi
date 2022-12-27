@@ -1,0 +1,6 @@
+<%= turbo_frame_tag dom_id(item,:angry_like) do %>
+  <%= button_to item_angries_path(item_id: item.id),method: :delete do %>
+    <%=image_tag 'obaba_angry.png', size: '150x150' %>
+    Angry <%=item.angries.count%>
+  <% end %>
+<% end %>

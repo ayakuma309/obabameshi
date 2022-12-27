@@ -1,0 +1,17 @@
+<div class="tabs">
+  <div class="<%= add_active_class(happies_path) %> tab tab-lg tab-lifted ">
+    <%= link_to  happies_path do %>
+      <%=image_tag 'obaba_happy.png', size: '70x70' %>
+    <% end %>
+  </div>
+  <div class="<%= add_active_class(normals_path) %> tab tab-lg tab-lifted">
+    <%= link_to normals_path do %>
+      <%=image_tag 'obaba_normal.png', size: '70x70' %>
+    <% end %>
+  </div>
+  <div class="<%= add_active_class(angries_path) %> tab tab-lg tab-lifted">
+    <%= link_to angries_path do %>
+      <%=image_tag 'obaba_angry.png', size: '70x70' %>
+    <% end %>
+  </div>
+</div>
