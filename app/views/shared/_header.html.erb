@@ -13,6 +13,7 @@
         <ul tabindex="0" class="menu menu-conpact dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 text-left">
           <li><%= link_to 'TOP', root_path %></li>
           <li><%= link_to 'アイテム一覧', items_path %></li>
+          <li><%= link_to '評価したアイテム一覧', happies_path %></li>
           <li><%= link_to 'Logout', logout_path, class: 'dropdown-item', data: { turbo_method: :delete } %></li>
         </ul>
       </div>
